@@ -1,5 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Arvo:700);
+@import url(https://fonts.googleapis.com/css?family=Seaweed+Script);
+
 body {
-  font-family: sans-serif;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/6/6d/Lake_Muskoka.jpg)
+    no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.plate {
+  width: 410px;
+  margin: 3% auto;
+}
+.shadow {
+  color: #fff;
+  font-family: Arvo;
+  font-weight: bold;
+  text-shadow: -3px -3px 0 #222, 3px -3px 0 #222, -3px 3px 0 #222,
+    3px 3px 0 #222, 4px 4px 0 #fff, 5px 5px 0 #fff, 6px 6px 0 #fff,
+    7px 7px 0 #fff;
+  line-height: 0.8em;
+  letter-spacing: 0.1em;
+  transform: scaleY(0.7);
+  -webkit-transform: scaleY(0.7);
+  -moz-transform: scaleY(0.7);
+  margin: 0;
+  text-align: center;
+}
+.script {
+  font-family: 'Seaweed Script';
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  position: relative;
+  margin: 0;
+}
+.script span {
+  background-color: #222;
+  padding: 0 0.3em;
+}
+.script:before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  width: 100%;
+  border-bottom: 3px solid #fff;
+}
+.text1 {
+  font-size: 20px;
+}
+.text2 {
+  font-size: 59px;
+}
+.text3 {
+  font-size: 20px;
 }
 
 a {
@@ -11,11 +68,244 @@ label {
 }
 
 nav a {
-  display: inline-block;
-  margin: 1em;
+  display: flex;
+  margin: 5px;
+  color: white;
+  font-style: italic;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 form div {
   margin: 1em;
   display: inline-block;
+}
+
+.navBar {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  background: #020202
+    url(//thewhiskyclub.com.au/wp-content/themes/MeetGavernWP/images/header.jpg)
+    no-repeat center 0;
+}
+
+#navBarGuest {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  background: #020202
+    url(//thewhiskyclub.com.au/wp-content/themes/MeetGavernWP/images/header.jpg)
+    no-repeat center 0;
+}
+
+#singleItem {
+  display: flex;
+  background-color: white;
+  color: black;
+  margin: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-right: 35%;
+  margin-left: 35%;
+  padding: 30px;
+  margin-bottom: 20%;
+  margin-top: 2%;
+  border-style: inset;
+  border-width: 5px;
+  font-family: Optima;
+  font-style: italic;
+  align-items: center;
+  text-align: center;
+}
+
+.allItems {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border-color: black;
+}
+
+.itemAll {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  background-size: 5%;
+  padding: 20px;
+  border-color: black;
+  border-radius: 40px;
+  background-color: white;
+  flex: 0 1 calc(18% - 20px);
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  border-style: solid;
+  border-width: 4px;
+}
+
+.navBarElement {
+  height: 20px;
+}
+
+.itemInCart {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  background-size: 5%;
+  padding: 2px;
+  border-color: black;
+  border-radius: 40px;
+  background-color: white;
+  flex: 0 1 calc(18% - 20px);
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  border-style: solid;
+  border-width: 4px;
+}
+
+#home {
+  display: flex;
+  flex-wrap: wrap;
+  color:  black;
+  background-color: white;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  outline-style: solid;
+  padding: 20px;
+  font-family: Optima;
+  font-style: italic;
+  justify-content: center;
+  align-items: center;
+}
+
+#quanColor {
+  color: black;
+}
+
+#totalPrice {
+  color: white;
+}
+
+#centerNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+#addButton {
+  border: none;
+  outline: none;
+}
+
+#cartButton {
+  border: none;
+  outline: none;
+}
+#buttonLinks {
+  width: 5px;
+  height: 5px;
+  margin-left: 35px;
+  display: block;
+  background-color: white;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+#personWelcome {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color:  black;
+  background-color: white;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  outline-style: solid;
+  padding: 50px;
+  font-family: Optima;
+  font-style: italic;
+  justify-content: center;
+  align-items: center;
+  border-style: inset;
+  border-width: 5px;
+}
+
+#orders {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: white;
+  margin-right: 30%;
+  margin-left: 30%;
+  margin-bottom: 5%;
+  justify-content: center;
+  align-items: center;
+  font-family: Optima;
+  font-style: italic;
+  border-style: outset;
+  border-color: black;
+}
+#inCart {
+  font-family: Optima;
+  font-style: italic;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#totalPrice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#total {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#qty {
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 12px;
+}
+#checkoutButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6%;
+}
+
+#guestCart {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  background-size: 5%;
+  padding: 2px;
+  border-color: black;
+  border-radius: 40px;
+  background-color: white;
+  flex: 0 1 calc(18% - 20px);
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  border-style: solid;
+  border-width: 4px;
 }

@@ -3,10 +3,27 @@ const Sequelize = require('sequelize')
 const db = require('../db')
 
 const User = db.define('user', {
+  firstName: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
+  },
+  lastName: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
+  },
   email: {
     type: Sequelize.STRING,
     unique: true,
-    allowNull: false
+    allowNull: false,
+    validate: {
+      isEmail: true
+    }
   },
   password: {
     type: Sequelize.STRING,
@@ -26,6 +43,13 @@ const User = db.define('user', {
   },
   googleId: {
     type: Sequelize.STRING
+  },
+  flag: {
+    type: Sequelize.INTEGER,
+    defaultValue: 0,
+    validate: {
+      isIn: [[0, 1]]
+    }
   }
 })
 
@@ -61,6 +85,10 @@ const setSaltAndPassword = user => {
     user.salt = User.generateSalt()
     user.password = User.encryptPassword(user.password(), user.salt())
   }
+}
+
+const getFullName = user => {
+  return `${user.firstName} ${user.lastName}`
 }
 
 User.beforeCreate(setSaltAndPassword)
