@@ -2,8 +2,16 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {withRouter, Route, Switch} from 'react-router-dom'
 import PropTypes from 'prop-types'
-import {Login, Signup, UserHome} from './components'
+import {Login, Signup} from './components'
+import AllItems from './components/AllItems'
+import SingleItem from './components/SingleItem'
 import {me} from './store'
+import Home from './components/Home'
+import Cart from './components/Cart'
+import Checkout from './components/Checkout'
+import MyOrders from './components/MyOrders'
+import UserProfile from './components/UserProfile'
+import AfterCheckOut from './components/AfterCheckOut'
 
 /**
  * COMPONENT
@@ -14,20 +22,19 @@ class Routes extends Component {
   }
 
   render() {
-    const {isLoggedIn} = this.props
-
     return (
       <Switch>
         {/* Routes placed here are available to all visitors */}
+        <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
-        {isLoggedIn && (
-          <Switch>
-            {/* Routes placed here are only available after logging in */}
-            <Route path="/home" component={UserHome} />
-          </Switch>
-        )}
-        {/* Displays our Login component as a fallback */}
+        <Route exact path="/catalog/:id" component={SingleItem} />
+        <Route exact path="/catalog" component={AllItems} />
+        <Route exact path="/cart" component={Cart} />
+        <Route exact path="/cart/checkout" component={Checkout} />
+        <Route exact path="/orders" component={MyOrders} />
+        <Route exact path="/user/me" component={UserProfile} />
+        <Route exact path="/success" component={AfterCheckOut} />
         <Route component={Login} />
       </Switch>
     )
