@@ -114,7 +114,7 @@ export class Cart extends Component {
   render() {
     return (
       <div>
-        <h1 id="inCart">Your Load Of Whiskey</h1>
+        <h1 id="inCart">Your Smoothie Order</h1>
         {this.props.user.id ? (
           <div>
             {this.props.cart.id ? (

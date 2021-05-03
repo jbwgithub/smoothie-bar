@@ -69,7 +69,7 @@ export class Checkout extends React.Component {
       <div className="checkout">
         {this.props.user.id ? (
           <div>
-            <h1>Case of Whiskey for my boys:</h1>
+            <h1>Smoothie Order:</h1>
             <h3>Total Price · ${cartTotal / 100} </h3>
           </div>
         ) : (

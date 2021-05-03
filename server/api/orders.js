@@ -145,7 +145,7 @@ router.put('/cart/checkout', async (req, res, next) => {
         currency: 'usd',
         customer: customer.id,
         receipt_email: token.email,
-        description: `Purchased the Case of Whiskey for my boys`,
+        description: `Purchased the smoothie for friends`,
         shipping: {
           name: token.card.name,
           address: {
