@@ -82,7 +82,7 @@ const Navbar = ({handleClick, isLoggedIn}) => (
         </div>
       )}
     </div>
-    )
+    {/* ) */}
   </div>
 )
 
