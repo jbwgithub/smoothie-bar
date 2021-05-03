@@ -201,7 +201,7 @@ export class Cart extends Component {
                     onClick={() => this.deleteItem(item.id, this.props.cart.id)}
                   >
                     <img
-                      src="https://www.clipartwiki.com/clipimg/detail/12-125328_collection-of-free-transparent-transparent-garbage-bin-cartoon.png"
+                      src="https://cdn4.iconfinder.com/data/icons/complete-common-version-6-4/1024/trash-512.png"
                       width={30}
                     />
                   </button>
