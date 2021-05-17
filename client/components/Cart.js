@@ -108,6 +108,7 @@ export class Cart extends Component {
         itemList: newitemList,
         guestSubtotal: subtotal
       })
+      console.log('HERE', this.state)
     }
   }
 
