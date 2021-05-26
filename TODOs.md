@@ -10,4 +10,7 @@ Fixes:
 
 Features:
 
+* Complete _Stripe_ component functionality, using **react-stripe-checkout**
+* Connect _Stripe_ payment to backend, for **_demo_** purposes
+* Ensure a customer can checkout with _Stripe_, and have customer info saved
 * Add real-time map/location functionality, in relation to pick-up location
